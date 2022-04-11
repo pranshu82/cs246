@@ -281,7 +281,7 @@ BtreeNode* Btree::findParent(BtreeNode* curr,BtreeNode* child){
 
     for(int i=0;i<curr->getsize()+1;i++){
         if(curr->getptr()[i] == child){
-            parent = child;
+            parent = curr;
             return parent;
         }
         else{
@@ -314,7 +314,7 @@ int main(){
     int d,t;
     cin>>d>>t;
 
-    Btree b(2,1);
+    Btree b(d,t);
     int x,y;
     cin>>x;
     while(x != 3){
